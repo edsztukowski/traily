@@ -10,6 +10,10 @@ function Jumbotron(props) {
   )
 }
 
-
+Jumbotron.propTypes = {
+  jumboImage: PropTypes.string.isRequired,
+  altTag: PropTypes.string,
+  jumboText: PropTypes.string
+}
 
 module.exports = Jumbotron;
