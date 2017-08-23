@@ -12,6 +12,7 @@ function Home() {
       <Jumbotron
         jumboText='Welcome to Trailsy'
         jumboImage={require('./images/traily-jumbo.jpeg')}
+        altTag='Hiking in the forest'
       />
     </div>
   )
