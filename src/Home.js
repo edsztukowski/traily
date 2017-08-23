@@ -1,5 +1,5 @@
 var React = require('react');
-var Jumbotron = require('./Jumbotron')
+var Jumbotron = require('./Jumbotron');
 
 //Home includes
   //jumbotron Component
@@ -11,10 +11,8 @@ function Home() {
     <div className="home-landing">
       <Jumbotron
         jumboText='Welcome to Trailsy'
-        jumboImage='http://via.placeholder.com/1300x300'
-        altTag='alt Text'
+        jumboImage={require('./images/traily-jumbo.jpeg')}
       />
-      
     </div>
   )
 }
