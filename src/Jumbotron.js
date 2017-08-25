@@ -3,7 +3,7 @@ var PropTypes = require('prop-types');
 
 function Jumbotron(props) {
   return (
-    <div className="jumbotron">
+    <div className="jumbo">
       <img src={props.jumboImage} alt={props.altTag} />
       <h1>{props.jumboText}</h1>
     </div>

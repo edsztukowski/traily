@@ -24,9 +24,9 @@ class Search extends React.Component {
   }
 
   handleSubmit(event) {
-    event.preventDefault();
     console.log('fired handlesubmit')
-    api.fetchTrails(this.state.city, this.state.state)
+    event.preventDefault();
+    api.fetchTrails(this.state.city, this.state.state);
   }
 
   render() {
@@ -36,18 +36,24 @@ class Search extends React.Component {
           <div className="form-group">
             <label htmlFor="search-query">Where do you want to hike?</label>
             <input
-            type="text"
-            name="city"
-            className="form-control"
-            placeholder="Enter a city"
-            onChange={this.handleChange}
+              type="text"
+              name="city"
+              className="form-control"
+              placeholder="Enter a city"
+              onChange={this.handleChange}
+              onSubmit={this.handleSubmit}
             />
             <input
-            type="text"
-            name="state"
-            className="form-control"
-            placeholder="Enter a state"
-            onChange={this.handleChange}
+              type="text"
+              name="state"
+              className="form-control"
+              placeholder="Enter a state"
+              onChange={this.handleChange}
+              onSubmit={this.handleSubmit}
+            />
+            <input
+              className="hide-submit"
+              type="submit"
             />
           </div>
         </form>
