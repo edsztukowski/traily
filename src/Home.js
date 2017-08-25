@@ -1,12 +1,6 @@
 var React = require('react');
 var Jumbotron = require('./Jumbotron');
-var api = require('./utils/api');
 var Search = require('./Search')
-
-//Home includes
-  //jumbotron Component
-  //search bar Component
-  //
 
 class Home extends React.Component {
   constructor(props) {
@@ -14,10 +8,6 @@ class Home extends React.Component {
     this.state = {
       test: 'test'
     }
-  }
-
-  componentDidMount() {
-    api.fetchTrails()
   }
 
 render() {
