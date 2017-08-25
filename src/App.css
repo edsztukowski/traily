@@ -2,7 +2,8 @@
   text-align: center;
 }
 
-.jumbotron {
+/*Jumbotron*/
+.jumbo {
   max-width: 100%;
   position: relative;
   display: flex;
@@ -10,13 +11,18 @@
   align-items: center;
 }
 
-.jumbotron h1 {
+.jumbo h1 {
   position: absolute;
   font-size: 5em;
   color: #f6f6f6;
   margin: 0;
 }
 
-.jumbotron img {
+.jumbo img {
   width: 100%;
+}
+
+/*Form Stuff*/
+.hide-submit {
+  display: none;
 }

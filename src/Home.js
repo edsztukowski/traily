@@ -1,11 +1,6 @@
 var React = require('react');
 var Jumbotron = require('./Jumbotron');
-var api = require('./utils/api')
-
-//Home includes
-  //jumbotron Component
-  //search bar Component
-  //
+var Search = require('./Search')
 
 class Home extends React.Component {
   constructor(props) {
@@ -13,10 +8,6 @@ class Home extends React.Component {
     this.state = {
       test: 'test'
     }
-  }
-
-  componentDidMount() {
-    api.fetchTrails()
   }
 
 render() {
@@ -27,6 +18,7 @@ render() {
         jumboImage={require('./images/traily-jumbo.jpeg')}
         altTag='Hiking in the forest'
       />
+      <Search />
     </div>
   )
 }
