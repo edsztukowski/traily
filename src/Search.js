@@ -6,7 +6,7 @@ class Search extends React.Component {
     super(props);
     this.state = {
       city: '',
-      state: ''
+      state: '',
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -41,7 +41,6 @@ class Search extends React.Component {
               className="form-control"
               placeholder="Enter a city"
               onChange={this.handleChange}
-              onSubmit={this.handleSubmit}
             />
             <input
               type="text"
@@ -49,7 +48,6 @@ class Search extends React.Component {
               className="form-control"
               placeholder="Enter a state"
               onChange={this.handleChange}
-              onSubmit={this.handleSubmit}
             />
             <input
               className="hide-submit"
