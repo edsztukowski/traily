@@ -11,7 +11,18 @@ function fetchTrails(city, state) {
     })
 }
 
+function fetchTrailsLocation(lat, lon) {
+  var apiKey = 'oREBnMnaVjmshDRFyuhJ1z8wNM0Yp1AGBI8jsnpIdsP6Xr8R9m';
+  var encodedURI = window.encodeURI('https://trailapi-trailapi.p.mashape.com/?lat=' + lat + '?limit=25&lon=' + lon + '&q[activities_activity_type_name_eq]=hiking&q[country_cont]=United+States&radius=10');
+
+  return axios.get(encodedURI,{ 'headers': { 'X-Mashape-Key': apiKey }})
+    .then(function(response){
+      console.log(response.data);
+    })
+}
+
 
 module.exports = {
   fetchTrails: fetchTrails,
+  fetchTrailsLocation: fetchTrailsLocation
 };

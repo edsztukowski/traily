@@ -1,6 +1,7 @@
 var React = require('react');
 var Jumbotron = require('./Jumbotron');
-var Search = require('./Search')
+var Search = require('./Search');
+var api = require('./utils/api')
 
 class Home extends React.Component {
   constructor(props) {
@@ -15,7 +16,6 @@ class Home extends React.Component {
   }
 
   getCoords = function() {
-    console.log('get coords fired')
     navigator.geolocation.getCurrentPosition(function(location) {
     this.setState(function() {
       return {
@@ -23,10 +23,13 @@ class Home extends React.Component {
         long: location.coords.longitude
       }
     })
+    api.fetchTrailsLocation(this.state.lat, this.state.long);
   }.bind(this));
+
   }
 
   componentDidMount() {
+    console.log('component mounted')
     this.getCoords();
   }
 
