@@ -26,7 +26,7 @@ class Search extends React.Component {
   handleSubmit(event) {
     console.log('fired handlesubmit')
     event.preventDefault();
-    api.fetchTrails(this.state.city, this.state.state);
+    api.fetchTrails(this.state.city, this.state.state)
   }
 
   render() {

@@ -17,7 +17,7 @@ function fetchTrailsLocation(lat, lon) {
 
   return axios.get(encodedURI,{ 'headers': { 'X-Mashape-Key': apiKey }})
     .then(function(response){
-      console.log(response.data);
+      return response.data.places;
     })
 }
 

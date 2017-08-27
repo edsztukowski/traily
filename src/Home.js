@@ -1,7 +1,8 @@
 var React = require('react');
 var Jumbotron = require('./Jumbotron');
 var Search = require('./Search');
-var api = require('./utils/api')
+var api = require('./utils/api');
+var TrailList = require('./TrailList')
 
 class Home extends React.Component {
   constructor(props) {
@@ -23,13 +24,19 @@ class Home extends React.Component {
         long: location.coords.longitude
       }
     })
-    api.fetchTrailsLocation(this.state.lat, this.state.long);
+    api.fetchTrailsLocation(this.state.lat, this.state.long)
+    .then(function (response) {
+      this.setState(function () {
+        return {
+          trailData: response,
+        }
+      })
+    }.bind(this))
   }.bind(this));
 
   }
 
   componentDidMount() {
-    console.log('component mounted')
     this.getCoords();
   }
 
@@ -42,6 +49,7 @@ render() {
         altTag='Hiking in the forest'
       />
       <Search  />
+      <TrailList trailData={this.state.trailData} />
     </div>
   )
 }
