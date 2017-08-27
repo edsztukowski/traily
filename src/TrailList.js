@@ -4,15 +4,17 @@ function TrailList(props) {
   var trailArr = props.trailData;
   console.log(trailArr);
     return (
-      <div>
-      <ul>
-        {trailArr.map(function(curr, index) {
-          return (
-          <li key={index}>
-            {curr.name}
-          </li>
-        )
-        })}
+      <div className="row homepage-trails">
+        <ul>
+          {trailArr.map(function(curr, index) {
+            if (index < 15) {
+              return (
+                <li key={curr.unique_id} className="trail-box col-md-4">
+                  {curr.name}
+                </li>
+              )
+            }
+          })}
         </ul>
       </div>
     )
