@@ -26,3 +26,9 @@
 .hide-submit {
   display: none;
 }
+
+.trail-box {
+  list-style-type: none;
+  text-align: left;
+  margin: 0 0 2em 0;
+}
