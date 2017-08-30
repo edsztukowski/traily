@@ -7,12 +7,20 @@ function TrailList(props) {
       <div className="row homepage-trails">
         <ul>
           {trailArr.map(function(curr, index) {
+            function decodeHtml(html) {
+                var txt = document.createElement("textarea");
+                txt.innerHTML = html;
+                return txt.value;
+            }
+            function replaceLineBreaksWithHTML(string) {
+              return string !== undefined ? string.replace(/\n/g, '<br/>') : "";
+            }
             if (index < 15) {
               return (
                 <div key={curr.unique_id}>
                 <li className="trail-box col-md-4">
                   <h2>{curr.name}</h2>
-                  <p>{curr.activities[0].description}</p>
+                  <p>{decodeHtml(curr.activities[0].description).replace(/<br\s*\/?>/gi,'')}</p>
                 </li>
                 </div>
               )
