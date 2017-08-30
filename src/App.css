@@ -35,8 +35,19 @@
   display: none;
 }
 
+/**Trail List**/
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 .trail-box {
   list-style-type: none;
   text-align: left;
   margin: 0 0 2em 0;
+  padding: 1em
+}
+
+.trail-box-container {
+  width: 33%;
 }
