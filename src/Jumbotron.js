@@ -1,11 +1,15 @@
 var React = require('react');
 var PropTypes = require('prop-types');
+var Search = require('./Search');
 
 function Jumbotron(props) {
   return (
     <div className="jumbo">
       <img src={props.jumboImage} alt={props.altTag} />
-      <h1>{props.jumboText}</h1>
+      <div className="search-container">
+        <h1>{props.jumboText}</h1>
+        {props.children}
+      </div>
     </div>
   )
 }

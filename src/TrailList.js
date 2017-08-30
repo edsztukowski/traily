@@ -12,9 +12,6 @@ function TrailList(props) {
                 txt.innerHTML = html;
                 return txt.value;
             }
-            function replaceLineBreaksWithHTML(string) {
-              return string !== undefined ? string.replace(/\n/g, '<br/>') : "";
-            }
             if (index < 15) {
               return (
                 <div key={curr.unique_id}>
