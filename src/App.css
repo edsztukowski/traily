@@ -7,15 +7,23 @@
   max-width: 100%;
   position: relative;
   display: flex;
-  justify-content: center; /* align horizontal */
+  justify-content: center;
   align-items: center;
 }
 
 .jumbo h1 {
-  position: absolute;
   font-size: 5em;
   color: #f6f6f6;
   margin: 0;
+}
+
+.search-container {
+  position: absolute;
+}
+.search-bar label {
+  color: #f6f6f6;
+  font-size: 1.3em;
+  margin-top: 1em;
 }
 
 .jumbo img {
@@ -27,8 +35,19 @@
   display: none;
 }
 
+/**Trail List**/
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 .trail-box {
   list-style-type: none;
   text-align: left;
   margin: 0 0 2em 0;
+  padding: 1em
+}
+
+.trail-box-container {
+  width: 33%;
 }
