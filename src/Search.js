@@ -1,5 +1,4 @@
 var React = require('react');
-var api = require('./utils/api')
 
 class Search extends React.Component {
   constructor(props) {
@@ -26,7 +25,7 @@ class Search extends React.Component {
   handleSubmit(event) {
     console.log('fired handlesubmit')
     event.preventDefault();
-    api.fetchTrails(this.state.city, this.state.state)
+    window.location.assign('/results/?city=' + this.state.city + '&state=' + this.state.state)
   }
 
   render() {
