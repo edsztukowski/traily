@@ -2,7 +2,6 @@ var React = require('react');
 
 function TrailList(props) {
   var trailArr = props.trailData;
-  console.log(trailArr);
     return (
       <div className="homepage-trails">
         <ul className="flex">
