@@ -48,7 +48,7 @@ render() {
         jumboImage={require('./images/traily-jumbo.jpeg')}
         altTag='Hiking in the forest'
       >
-        <Search />
+        <Search history={this.props.history} />
       </Jumbotron>
       <TrailList trailData={this.state.trailData} />
     </div>
